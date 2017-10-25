@@ -3,10 +3,10 @@
     width: 800px;
     height: 400px;
     margin: 0 auto;
+    margin-top: 30px;
     border: 10px solid gray;
     z-index: 1;
-    position: fixed;
-    display: inline-block;
+
 }
 
 #backgroundImg{
