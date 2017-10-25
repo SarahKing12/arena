@@ -1,0 +1,83 @@
+.wrapper{
+    background: black;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 10px solid gray;
+    z-index: 1;
+    position: fixed;
+    display: inline-block;
+}
+
+#backgroundImg{
+    z-index: 2;
+    position: fixed;
+    width: 800px;
+    height: 400px;
+    display:inline-block;
+}
+
+.buttons{
+    background-color: gray;
+    width:300px;
+    height: 135px;
+    display: inline-block;
+    margin-left: 250px;
+    margin-top: 145px;
+    text-align: center;
+    z-index: 10;
+    position: fixed;
+    
+
+}
+
+button{
+    width:65px;
+    margin: 3px;
+}
+
+h1{
+    color: yellow;  
+    margin-bottom: 10px;  
+
+}
+
+.buttonbox{
+    vertical-align: top;
+    margin-bottom: 10px;
+
+}
+
+#choosePlayer{
+    display: none;
+}
+
+#playerimg{
+    width: 800px;
+    height: 200px;
+    position: fixed;
+    z-index: 4;
+}
+
+#leftplayer{
+    width: 300px;
+    height: 300px;
+    vertical-align: bottom;
+    margin-right: 125px;
+    margin-left: -40px;
+    display: none;
+}
+
+#rightplayer{
+    width: 300px;
+    height: 300px;
+    vertical-align: bottom;
+    margin-left: 100px;
+    margin-top: 125px;
+    display: none;
+}
+
+#choosePlayer button{
+vertical-align: bottom;
+display: inline-block;
+}

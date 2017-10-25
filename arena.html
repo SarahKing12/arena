@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Arena</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){
+        var playerOneSelectBool = false;
+        var playerTwoSelectBool = false;
+
+        $("button").hover(function () {
+                var imgSrc = $(this).attr("value")
+            $("#backgroundImg").attr("src", imgSrc);
+            })
+
+            $("button").click(function(){
+                $(".buttons").hide();
+                $("#choosePlayer").show();
+            })
+
+            $("#ninja1").click(function(){
+                var playerOneImg = $(this).val();
+                $("#leftplayer").attr("src", playerOneImg);
+                $("#leftplayer").show();
+                playerOneSelectBool = true;
+            })
+
+            $("#ninja2").click(function(){
+                var playerTwoImg = $(this).val();
+                $("#rightplayer").attr("src", playerTwoImg);
+                $("#rightplayer").show();
+                playerTwoSelectBool = true;
+            })
+            $("#choosePlayer button").click(function(){
+                if(playerOneSelectBool && playerTwoSelectBool){
+                    $("#choosePlayer").hide();
+                }else{
+                    alert("Both players must be selected for the fight to start!")
+                }
+
+            })
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="backgroundImg" src="" alt="">
+    <div class="buttons">
+        <h1>Select Arena</h1>
+        <div class="buttonbox">
+            <div id="topbuttons">
+        <button value="images/beach.jpg">beach</button>
+        <button value="images/earth.jpg">planet</button>
+        <button value="images/dojo.jpg">dojo</button>
+            </div>
+            <div id="bottombuttons">
+        <button value="images/forest.jpg">forest</button>
+        <button value="images/matrix.jpg">matrix</button>
+        <button value="images/snow.jpg">snow</button>
+    </div>
+    </div>
+    </div>
+    <div class="buttonbox buttons" id="choosePlayer">
+        <h1>Select Players</h1>
+        <select name="player1" id="ninja1">
+            <option value="images/donny.png">Donny</option>
+            <option value="images/leo.png">Leo</option>
+            <option value="images/mikey.png">Mikey</option>
+            <option value="images/raphael.png">Raph</option>
+        </select>
+        <select name="player2" id="ninja2">
+                <option value="images/donny.png">Donny</option>
+                <option value="images/leo.png">Leo</option>
+                <option value="images/mikey.png">Mikey</option>
+                <option value="images/raphael.png">Raph</option>
+            </select>
+            <br />
+            <button>Fight!</button>
+    </div>
+    <div id="playerimg">
+       <img src="" id="leftplayer" alt="leftplayer">
+        <img src="" id="rightplayer" alt="rightplayer">
+    </div>
+
+</div>
+    
+</body>
+</html>
